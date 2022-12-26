@@ -23,6 +23,7 @@ require "user.dap"
 
 require "user.whichkey"
 require "user.colorizer"
+require "user.harpoon"
 
 require "user.barbaric"
 require "user.markdown-preview"
