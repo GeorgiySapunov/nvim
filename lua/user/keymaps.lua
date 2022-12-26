@@ -42,6 +42,14 @@ keymap("n", "<S-q>", "<cmd>Bdelete!<CR>", opts)
 -- Better paste
 keymap("v", "p", '"_dP', opts)
 
+-- next greatest remap ever : asbjornHaland
+keymap({"n", "v"}, "<leader>y", [["+y]])
+keymap("n", "<leader>Y", [["+Y]])
+
+keymap({"n", "v"}, "<leader>d", [["_d]])
+
+keymap("n", "Q", "<nop>")
+
 -- Insert --
 -- Press jk fast to enter
 -- keymap("i", "jk", "<ESC>", opts)
