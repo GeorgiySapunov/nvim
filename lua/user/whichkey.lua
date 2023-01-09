@@ -81,7 +81,7 @@ local opts = {
 local mappings = {
   ["u"] = { "<cmd>UndotreeToggle<CR>", "UndoTree" },
   ["m"] = { "<cmd>MarkdownPreviewToggle<CR>", "Markdown" },
-  ["A"] = { "<cmd>Alpha<cr>", "Alpha" },
+  ["a"] = { "<cmd>Alpha<cr>", "Alpha" },
   ["b"] = {
     "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>",
     "Buffers",
@@ -182,7 +182,7 @@ local mappings = {
     h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
     v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
   },
-  D = {
+  j = {
     name = "DAP",
     b = { "<cmd>lua require'dap'.toggle_breakpoint()<cr>", "Toggle breakpoint" },
     c = { "<cmd>lua require'dap'.continue()<cr>", "Continue" },
