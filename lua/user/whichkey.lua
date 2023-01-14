@@ -79,6 +79,8 @@ local opts = {
 }
 
 local mappings = {
+  ["o"] = { "<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>", "Harpoon menu" },
+  ["i"] = { "<cmd>lua require('harpoon.mark').add_file()<cr>", "Add to Harpoon list" },
   ["u"] = { "<cmd>UndotreeToggle<CR>", "UndoTree" },
   ["m"] = { "<cmd>MarkdownPreviewToggle<CR>", "Markdown" },
   ["a"] = { "<cmd>Alpha<cr>", "Alpha" },
