@@ -34,7 +34,7 @@ keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
 
 -- Clear highlights
--- keymap("n", "<leader>h", "<cmd>nohlsearch<CR>", opts)
+keymap("n", "<leader>h", "<cmd>nohlsearch<CR>", opts)
 
 -- Close buffers
 keymap("n", "<S-q>", "<cmd>Bdelete!<CR>", opts)
@@ -45,14 +45,12 @@ keymap("v", "p", '"_dP', opts)
 -- next greatest remap ever : asbjornHaland
 keymap({"n", "v"}, "<leader>y", [["+y]])
 keymap("n", "<leader>Y", [["+Y]])
-
 keymap({"n", "v"}, "<leader>d", [["_d]])
-
 keymap("n", "Q", "<nop>")
 
 -- Insert --
 -- Press jk fast to enter
--- keymap("i", "jk", "<ESC>", opts)
+keymap("i", "jk", "<ESC>", opts)
 
 -- Visual --
 -- Stay in indent mode
@@ -60,44 +58,40 @@ keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
 
 -- Move text up and down
--- keymap("v", "<A-j>", ":m .+1<CR>==", opts)
--- keymap("v", "<A-k>", ":m .-2<CR>==", opts)
-
--- Visual Block --
--- Move text up and down
 keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
--- keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
--- keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
 -- Plugins --
 
 -- NvimTree
--- keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
+keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
 
 -- Telescope
--- keymap("n", "<leader>ff", ":Telescope find_files<CR>", opts)
--- keymap("n", "<leader>ft", ":Telescope live_grep<CR>", opts)
--- keymap("n", "<leader>fp", ":Telescope projects<CR>", opts)
--- keymap("n", "<leader>fb", ":Telescope buffers<CR>", opts)
+keymap("n", "<leader>ff", ":Telescope find_files<CR>", opts)
+keymap("n", "<leader>ft", ":Telescope live_grep<CR>", opts)
+keymap("n", "<leader>fp", ":Telescope projects<CR>", opts)
+keymap("n", "<leader>fb", ":Telescope buffers<CR>", opts)
 
 -- Git
--- keymap("n", "<leader>gg", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", opts)
+keymap("n", "<leader>gg", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", opts)
 
 -- Comment
 keymap("n", "<leader>/", "<cmd>lua require('Comment.api').toggle.linewise.current()<CR>", opts)
 keymap("x", "<leader>/", "<esc><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<CR>", opts)
 
 -- DAP
--- keymap("n", "<leader>db", "<cmd>lua require'dap'.toggle_breakpoint()<cr>", opts)
--- keymap("n", "<leader>dc", "<cmd>lua require'dap'.continue()<cr>", opts)
--- keymap("n", "<leader>di", "<cmd>lua require'dap'.step_into()<cr>", opts)
--- keymap("n", "<leader>do", "<cmd>lua require'dap'.step_over()<cr>", opts)
--- keymap("n", "<leader>dO", "<cmd>lua require'dap'.step_out()<cr>", opts)
--- keymap("n", "<leader>dr", "<cmd>lua require'dap'.repl.toggle()<cr>", opts)
--- keymap("n", "<leader>dl", "<cmd>lua require'dap'.run_last()<cr>", opts)
--- keymap("n", "<leader>du", "<cmd>lua require'dapui'.toggle()<cr>", opts)
--- keymap("n", "<leader>dt", "<cmd>lua require'dap'.terminate()<cr>", opts)
+keymap("n", "<leader>jb", "<cmd>lua require'dap'.toggle_breakpoint()<cr>", opts)
+keymap("n", "<leader>jc", "<cmd>lua require'dap'.continue()<cr>", opts)
+keymap("n", "<leader>ji", "<cmd>lua require'dap'.step_into()<cr>", opts)
+keymap("n", "<leader>jo", "<cmd>lua require'dap'.step_over()<cr>", opts)
+keymap("n", "<leader>jO", "<cmd>lua require'dap'.step_out()<cr>", opts)
+keymap("n", "<leader>jr", "<cmd>lua require'dap'.repl.toggle()<cr>", opts)
+keymap("n", "<leader>jl", "<cmd>lua require'dap'.run_last()<cr>", opts)
+keymap("n", "<leader>ju", "<cmd>lua require'dapui'.toggle()<cr>", opts)
+keymap("n", "<leader>jt", "<cmd>lua require'dap'.terminate()<cr>", opts)
 
 -- Lsp
--- keymap("n", "<leader>lf", "<cmd>lua vim.lsp.buf.format{ async = true }<cr>", opts)
+keymap("n", "<leader>lf", "<cmd>lua vim.lsp.buf.format{ async = true }<cr>", opts)
+
+--
+keymap("n", "<leader>m", "<cmd>MarkdownPreviewToggle<cr>", opts)

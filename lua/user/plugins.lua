@@ -121,6 +121,27 @@ return packer.startup(function(use)
         require('mkdnflow').setup({})
     end
   }
+  use {
+    "nvim-neorg/neorg",
+    config = function()
+        require('neorg').setup {
+            load = {
+                ["core.defaults"] = {}, -- Loads default behaviour
+                ["core.norg.concealer"] = {}, -- Adds pretty icons to your documents
+                ["core.norg.dirman"] = { -- Manages Neorg workspaces
+                    config = {
+                        workspaces = {
+                            notes = "~/notes",
+                        },
+                        default_workspace = "notes"
+                    },
+                },
+            },
+        }
+    end,
+    run = ":Neorg sync-parsers",
+    requires = "nvim-lua/plenary.nvim",
+}
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
