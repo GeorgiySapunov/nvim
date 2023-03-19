@@ -94,4 +94,4 @@ keymap("n", "<leader>jt", "<cmd>lua require'dap'.terminate()<cr>", opts)
 keymap("n", "<leader>lf", "<cmd>lua vim.lsp.buf.format{ async = true }<cr>", opts)
 
 --
-keymap("n", "<leader>m", "<cmd>MarkdownPreviewToggle<cr>", opts)
+keymap("n", "<leader>M", "<cmd>MarkdownPreviewToggle<cr>", opts)
