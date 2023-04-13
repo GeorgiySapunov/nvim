@@ -96,6 +96,7 @@ function M.config()
     ["q"] = { "<cmd>q!<CR>", "Quit" },
     ["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
     ["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
+    ["r"] = { "<cmd>Lazy<CR>", "Lazy" },
   
     f = {
       name = "Find",
@@ -105,14 +106,14 @@ function M.config()
       b = { "<cmd>Telescope buffers<cr>", "Buffers" },
     },
   
-    r = {
-      name = "Packer",
-      c = { "<cmd>PackerCompile<cr>", "Compile" },
-      i = { "<cmd>PackerInstall<cr>", "Install" },
-      s = { "<cmd>PackerSync<cr>", "Sync" },
-      S = { "<cmd>PackerStatus<cr>", "Status" },
-      u = { "<cmd>PackerUpdate<cr>", "Update" },
-    },
+    -- r = {
+    --   name = "Packer",
+    --   c = { "<cmd>PackerCompile<cr>", "Compile" },
+    --   i = { "<cmd>PackerInstall<cr>", "Install" },
+    --   s = { "<cmd>PackerSync<cr>", "Sync" },
+    --   S = { "<cmd>PackerStatus<cr>", "Status" },
+    --   u = { "<cmd>PackerUpdate<cr>", "Update" },
+    -- },
   
     g = {
       name = "Git",
